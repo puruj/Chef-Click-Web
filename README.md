@@ -1,1 +1,1 @@
-# ChefClick-
+# ChefClick

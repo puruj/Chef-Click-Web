@@ -1,4 +1,4 @@
-import { Search, Soup } from 'lucide-react'
+import { Heart, Search, Soup } from 'lucide-react'
 import React from 'react'
 
 const HomePage = () => {
@@ -25,6 +25,9 @@ const HomePage = () => {
             <img src='/1.jpg' alt='recipe img' className='rounded-md w-full h-full object-cover cursor-pointer'/>
             <div className='absolute bottom-2 left-2 bg-white rounded-full p-1 cursor-pointer flex items-center gap-1 text-sm'>
               <Soup size={16}/> 4 Servings
+            </div>
+            <div className='absolute top-2 right-2 bg-white rounded-full p-1 cursor-pointer'>
+              <Heart size={20} className='hover:fill-red-500 hover:text-red-500'/>
             </div>
             </a>
           </div>

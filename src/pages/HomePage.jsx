@@ -1,4 +1,4 @@
-import { Heart, HeartPulse, Search, Soup } from 'lucide-react'
+import {Search } from 'lucide-react'
 import React from 'react'
 import RecipeCard from '../components/RecipeCard'
 
@@ -20,17 +20,6 @@ const HomePage = () => {
         <p className='text-slate-500 font-semibold m1-1 my-2 text-sm tracking-tight'>Popular Choices</p>
         <div className='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
           {/* 1st recipe */}
-         <RecipeCard />
-         <RecipeCard />
-         <RecipeCard />
-         <RecipeCard />
-         <RecipeCard />
-         <RecipeCard />
-         <RecipeCard />
-         <RecipeCard />
-         <RecipeCard />
-         <RecipeCard />
-         <RecipeCard />
          <RecipeCard />
         </div>
       </div>

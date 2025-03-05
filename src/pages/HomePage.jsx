@@ -37,10 +37,15 @@ const HomePage = () => {
     fetchRecipes("tofu");
   }, []);
 
+	const handleSearchRecipe = (e) => {
+		e.preventDefault();
+		fetchRecipes(e.target[0].value);
+	};
+
   return (
     <div className='bg-[#faf9fb] p-10 flex-1'>
       <div className='max-w-screen-lg mx-auto'>
-        <form className='w-full'>
+        <form onSubmit= {handleSearchRecipe} className='w-full'>
           <label className='input flex items-center gap-2 w-full shadow-md p-3'>
             <Search size={24}/>
             <input

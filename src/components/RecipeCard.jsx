@@ -27,6 +27,7 @@ const RecipeCard = ({recipe, bg, badge}) => {
 
   return (
     <div className={`flex flex-col rounded-md ${bg} overflow-hidden p-3 relative`}>
+    <div className="flex flex-col rounded-md overflow-hidden p-3 relative transform transition duration-200 hover:scale-105 hover:shadow-lg"> 
     {/* recipe youtube video link */}
     <a 
     href={`https://www.youtube.com/results?search_query=${recipe.label} recipe`}
@@ -73,6 +74,7 @@ const RecipeCard = ({recipe, bg, badge}) => {
         ))}
     </div>
   </div>
+  </div> 
   )
 }
 

@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react'
 import RecipeCard from '../components/RecipeCard'
 import { getRandomColor } from '../lib/utils'
 
-const APP_ID="7c152676"
-const APP_KEY="b987c7bed1bcc6bd12e3ef5e2ee663fe"
+const APP_ID = import.meta.env.VITE_APP_ID;
+const APP_KEY = import.meta.env.VITE_APP_KEY;
+const EDAMAM_ACCOUT_USER = import.meta.env.VITE_EDAMAM_ACCOUT_USER;
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
@@ -20,7 +21,7 @@ const HomePage = () => {
           method: 'GET',
           headers: {
             'Accept': 'application/json',
-            'Edamam-Account-User': 'electron333', 
+            'Edamam-Account-User': EDAMAM_ACCOUT_USER,
             'Accept-Language': 'en'              
           }
         }

@@ -1,5 +1,6 @@
 import { Heart, HeartPulse, Soup } from 'lucide-react'
 import React, { useState } from 'react'
+import { motion } from "framer-motion";
 
 const getTwoValuesFromArray = (arr) => {
   return [arr[0], arr[1]];
@@ -45,16 +46,19 @@ const RecipeCard = ({recipe, bg, badge}) => {
     <div className='absolute bottom-2 left-2 bg-white rounded-full p-1 cursor-pointer flex items-center gap-1 text-sm'>
       <Soup size={16}/> {recipe.yield} Servings
     </div>
-    <div className='absolute top-2 right-2 bg-white rounded-full p-1 cursor-pointer'
-      onClick={(e) => {
-        // prevents it from loading youtube link when you want to favorite a recipe
-        e.preventDefault();
-        addRecipeToFavorites();
-      }}
-    >
-      {!isFavorite && <Heart size={20} className='hover:fill-red-500 hover:text-red-500'/>}
-      {isFavorite && <Heart size={20} className='fill-red-500 text-red-500'/>}
-    </div>
+      <motion.div
+          className='absolute top-2 right-2 bg-white rounded-full p-1 cursor-pointer'
+          onClick={(e) => {
+            e.preventDefault();
+            addRecipeToFavorites();
+          }}
+          whileTap={{ scale: 0.8 }}  // quick shrink when tapped
+          animate={isFavorite ? { scale: 1.2 } : { scale: 1 }} 
+          transition={{ type: "spring", stiffness: 500, damping: 10 }}
+        >
+          {!isFavorite && <Heart size={20} className='hover:fill-red-500 hover:text-red-500' />}
+          {isFavorite && <Heart size={20} className='fill-red-500 text-red-500' />}
+        </motion.div>
     </a>
     <div className='flex mt-1'>
       <p className='font-bold traciking-wide'>{recipe.label}</p>

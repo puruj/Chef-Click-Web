@@ -36,7 +36,7 @@ const HomePage = () => {
     }
   }
   useEffect(() => {
-    fetchRecipes("tofu");
+    fetchRecipes("margherita pizza");
   }, []);
 
 	const handleSearchRecipe = (e) => {

@@ -12,7 +12,7 @@ A responsive recipe-finding web application built with React and JavaScript. Thi
 
 ## Demo
 
-Check out the live demo of the Recipe Finder App here: [Recipe Finder App Live](https://67c8a613909bb6a97a233534--cerulean-smakager-51d0a1.netlify.app/)
+Check out the live demo of the Recipe Finder App here: [Recipe Finder App Live](https://cerulean-smakager-51d0a1.netlify.app/)
 
 ## Installation
 
